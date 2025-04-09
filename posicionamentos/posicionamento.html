@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang = "pt-br">
+    <head>
+        <title> Posições em HTML </title>
+    </head>
+    <style>
+        #icone{
+            width: 250px;
+            float: left;
+        }
+
+        #icone2{
+            width: 250px;
+            float: right;
+        }
+
+        #p1{
+            display: block;
+            left: 200px;
+
+        }
+        #p2{
+            position: relative;
+            width:210px;
+            top: 100px;
+            left: 30px;
+
+        }
+        #p3{
+            display: inline-block;
+            top: 100px;
+
+        }
+        #p4{
+            display: inline-block;
+            top: 100px;
+            position: absolute;
+
+        }
+        #p5{
+            display: inline-block;
+            width: 190px;
+            position: fixed;
+            background-color: aliceblue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
+    <body>
+        <img id = "icone" src = "icone.jpg" alt=""> 
+                <div id="p1"> P1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt ipsa voluptatum deserunt. Nemo, similique tenetur corrupti iure distinctio, suscipit nisi voluptas quod alias illum inventore quae, excepturi fugit quibusdam.</div>
+
+                <img id = "icone2" src = "icone2.jpg" alt="">
+        <div id = "p2"> P2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis deserunt dolore, voluptates, officia voluptatibus eligendi illum itaque obcaecati dolor aliquid quam unde amet ducimus quidem, error sit magnam ipsam. A mudança com "position relative;" é em relação a posição estática do parágrafo a posição estática
+
+            <p id = "p3"> P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis deserunt dolore, voluptates, officia voluptatibus eligendi illum itaque obcaecati dolor aliquid quam unde amet ducimus quidem, error sit magnam ipsam. A mudança com "position relative;" é em relação a posição estática do parágrafo a posição estática</p>
+
+            <p id = "p5"> P5 Div central. "position: fixed;" se posiciona em relação a tela</p>
+
+            <p id = "p4"> P4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis deserunt dolore, voluptates, officia voluptatibus eligendi illum itaque obcaecati dolor aliquid quam unde amet ducimus quidem, error sit magnam ipsam. "position: absolute;" se posiciona  em uma nova camada</p>
+
+            <p id = "p3"> P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis deserunt dolore, voluptates, officia voluptatibus eligendi illum itaque obcaecati dolor aliquid quam unde amet ducimus quidem, error sit magnam ipsam. A mudança com "position relative;" é em relação a posição estática do parágrafo a posição estática</p>
+
+            <p id = "p3"> P3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis omnis deserunt dolore, voluptates, officia voluptatibus eligendi illum itaque obcaecati dolor aliquid quam unde amet ducimus quidem, error sit magnam ipsam. A mudança com "position relative;" é em relação a posição estática do parágrafo a posição estática</p>
+        </div>
+
+    </body>
+</html>
