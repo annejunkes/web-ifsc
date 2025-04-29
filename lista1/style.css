@@ -1,0 +1,19 @@
+
+img{
+    width: 120px;
+}
+tr{
+    border: 1px solid black;
+    color: #053d00;
+}
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color:rgb(224, 203, 174);
+    border-style:dotted;
+}
+td{
+    border: 1px solid black;
+    border-style: dashed;
+}
+  
