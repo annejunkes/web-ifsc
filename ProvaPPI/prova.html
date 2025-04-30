@@ -8,6 +8,7 @@
 <style>
     .container{
         display:flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         height:20lvh;
         width: 100lvw;
@@ -34,7 +35,6 @@
     }
     .bandeira3{
         display:flex;
-        flex-direction:column;
         height:250px;
         width:400px;
         border-radius: 50%;
@@ -42,19 +42,33 @@
 
 </style>
 <body>
+
+    <p><br> R:1 - Ao pressionar Enter, será chamado o DNS(nome de domínio do site, exemplo:
+         www.ifsc.com.br), o IP (endereço) será enviado para o link, será feita uma requisição
+        HTTP, um aplicativo vai procurar essa requisição e formular uma resposta HTTP. Caso o redirecionamento para o link solicitado dê certo, será renderizada a estilização e lógica da página (css e javascript), o site irá abrir e a resposta no cabeçalho HTTP será OK, senão aparecerá uma página html informando qual tipo de resposta HTTP o link gerou (exemplo: Error 404)</p>
+        <p><br> R:2 - Não, HTML é uma linguagem de marcação de texto (Hyper Text Mark Language), ela utiliza tags para classificar os elementos na tela e não possui variáveis para armazenar informação. O CSS também não é uma linguagem de programação e tem finalidade de estilização de telas, sejam elas web ou desktop. O Javascript é uma linguagem de programação e é utilizado para adicionar funcionalidade às telas, como ações em botões e fluxo de telas</p>
+        <p><br> R:3 - Uma regra CSS padroniza a estilização de elementos da mesma classe, id ou tag. <br> Exemplo: <br>div{ <i>=>  div é o seletor css, tag/classe/id que vai ser padronizada (nesse caso é a tag)</i>
+            <br>height: 20lvh<i>=>  height é um atributo da div que vai definir a altura dela</i>; <br>width: 20lvw<i>=>  width é um atributo da div que vai definir a largura dela<br>}
+                <br>Obs: Alguns seletores tem prioridade sobre outros, como o id sobre a classe e a classe sobre a tag
+        </p>
+        <p><br> <br> R:4 -  
+        </p>
+
+        
     <div class="container">
          <div class="bandeira1"> 
             <div id="circulo"> </div>
         </div>
         <div class="bandeira2">
-            <div style="background-color: rgb(223, 24, 24); height:33%; "></div>
+            <div style="background-color: rgb(223, 24, 24); height:33%;"></div>
             <div style="background-color: rgb(248, 248, 248); height:33%; "></div>
             <div style="background-color: rgb(4, 20, 160); height:33%; "></div>
+            <div style="border: 9px solid white; height: 100%; width:100%;"></div> 
         </div>
         <div class="bandeira3">
-            <div style="background-color: rgb(1, 85, 46); height:33%; "></div>
-            <div style="background-color: rgb(248, 248, 248); height:33%; "></div>
-            <div style="background-color: rgb(190, 17, 17); height:33%; "></div>
+            <div style="background-color: rgb(1, 85, 46); height:100%; width: 33%; "></div>
+            <div style="background-color: rgb(248, 248, 248); height:100%; width: 33%;"></div>
+            <div style="background-color: rgb(190, 17, 17); height:100%; width: 33%;"></div>
         </div>
     </div>
 </body>
