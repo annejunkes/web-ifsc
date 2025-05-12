@@ -6,67 +6,28 @@
     <title>Document</title>
 </head>
 <style>
-    div{
-       text-align:center; 
+    
+    .container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aqua;
+        height: 100lvh;
+        width: 100lvw;
     }
-    p{
-        margin-top: 40%;
-    }
-    #p1{
-            width: 190px;
-            height: 190px;
-            position: fixed;
-            background-color: gray;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-    }
-    #p2{
-        position: fixed;
-        width: 190px;
-        height: 190px;
-        background-color: red;
-        top: 0%;
-        left: 0%;
-    }
+    .child{
+        background-color: antiquewhite;
+        height: 100px;
+        width: 100px;
 
-    #p3{
-        position: fixed;
-        width: 190px;
-        height: 190px;
-        background-color: green;
-        bottom: 0%;
-        left: 0%;
-    }
-    #p4{
-        position: fixed;
-        width: 190px;
-        height: 190px;
-        background-color: purple;
-        top: 0%;
-        right: 0%;
-    }
-    #p5{
-        position: fixed;
-        width: 190px;
-        height: 190px;
-        background-color: yellow;
-        bottom: 0%;
-        right: 0%;
     }
 
 </style>
 <body>
 
-        <div id="p1"><p>Centro</p></div>
-
-        <div id="p2"><p>Esquerda em cima</p></div>
-
-        <div id="p3"><p>Esquerda embaixo</p></div>
-
-        <div id="p4"><p>Direita em cima</p></div>
-
-        <div id="p5"><p>Direita embaixo</p></div>
+    <div class="container">
+        <div class="child"></div>
+    </div>
 
     
 </body>

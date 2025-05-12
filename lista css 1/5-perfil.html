@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px; padding:0px;
+    }
+    li{
+         margin-left: 15px;
+    }
+    .container{
+        display:flex;
+        height: 100lvh;
+        width: 100lvw;
+        background-color: blueviolet;
+    }
+    .container1{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100lvh;
+        max-width: 350px;
+        min-width: 350px;
+        background-color: rgb(55, 61, 75);
+    }
+    .container2{
+        display:flex;
+        flex-direction: column;
+        justify-content:space-around;
+        height: 100lvh;
+        width:1500px;
+        background-color: rgb(255, 255, 255);
+        padding:20px;
+    }
+    .linha{
+        
+        height:2px;
+        width:100lvh;
+        background-color: rgb(199, 199, 199);
+    }
+    #fotoperfil{
+        border-radius: 50%;
+        margin-top: 20px;
+       display: flex;
+       flex-direction: column;
+       align-self: center;  
+        height:200px;
+        width:200px;
+    }
+    .container1>*{
+        margin-inline-start: 10%;
+        -webkit-text-fill-color: rgb(198, 198, 198);
+    }
+    
+</style>
+<body>
+    <div class="container">
+        
+
+    <div class="container1">
+        <img id="fotoperfil" src="loona.jpg" 
+        alt="Chuu do Loona">  
+        <h2>Pessoal</h2>   
+        <div class="linha"></div>  
+        <p><b>Nome</b><br> Joana Barbosa</p>
+        <p><b>Endereço</b><br> Rua da Paz, 250 <br>
+             7100-011 Lisboa</p>
+        <p><b>Número de telefone</b><br> 99960234556</p>
+        <p><b>Email</b><br> joana@gmail.com</p>
+        <h2>Interesses</h2> 
+    </div>
+
+    <div class="container2">
+       <h1>Joana Barbosa</h1>
+       <div class="linha"></div>
+       <p>Uma marketer digital com sentido de missão e com mais de três
+         anos de experiência em conduzir iniciativas promocionais. 
+         Sou uma especialista em online marketing, lead generation e 
+         nurturing. Tenho uma comunicação exemplar, aptidões 
+         interpessoais e trabalho bem sobre pressão de forma a atingir 
+         os objetivos.</p>
+
+         <h2>Experiência Profissional</h2>
+         <div class="linha"></div>
+         <div>
+         <h3>Junior SEO Marketer</h3>
+         <p> <i>Cyanca, Lisboa</i></p>
+         <ul>
+            <li>Página on/off SEO</li>
+            <li>Estratégias de linkbuilding</li>
+            <li>Criação de conteúdo relevante</li>
+            <li>Trabalho com ferramentas online: Ahrefs, Google Analytics
+                Google Search Console, Google Adwords
+            </li>
+         </ul>
+         <br>
+          <h3>Asistente de vendas</h3>
+         <p> <i>Salsa, Lisboa</i></p>
+         <ul>
+            <li>Contribuição para os objetivos de vendas</li>
+            <li>Gestão de inventário</li>
+            <li>Apoio a clientes</li>
+            <br><br><br><br><br>
+            
+         </ul>
+         </div>
+
+
+    </div>
+</div>
+</body>
+</html>

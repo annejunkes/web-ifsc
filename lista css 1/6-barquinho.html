@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+        @keyframes mover{
+            0% { 
+                left: -200px; transform: rotate(-10deg); 
+            }
+            50% { 
+                transform: rotate(5deg); 
+            }
+            100% { 
+                left: 100%; transform: rotate(-10deg); 
+            }
+    }
+    @keyframes vento{
+        0% { 
+                left: -300px;; 
+            }
+            
+            100% { 
+                left: 100%;; 
+            }
+    }
+    *{
+        padding: 0%;
+        margin: 0%;
+    }
+
+        
+        #barco{
+            animation: mover 8s infinite linear;
+        }
+
+    #ceu{
+        height: 70lvh;
+        width: 100lvw;
+        background-image: image("ceu.jpg");
+    }
+    #mar{
+        height:30lvh;
+        width:100lvw;
+        background-color: rgb(21, 69, 113);
+    }
+    
+    #nuvem1{
+        position: absolute;
+        top: 30%;
+        height:100px;
+        width:300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 40%;
+        animation: vento 20s infinite linear;
+        box-shadow: 5px 10px 10px rgb(86, 86, 86);
+
+    }
+    #nuvem2{
+        position: absolute;
+        top: 20%;
+        height:100px;
+        width:300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 40%;
+        animation: vento 15s infinite linear;
+        box-shadow: 5px 10px 10px rgb(148, 148, 148);
+    }
+    img{
+        bottom: 20%;
+        height: 200px;
+        width: 200px;
+        position:absolute;
+    }
+
+</style>
+<body>
+    
+    <div id="ceu">
+        <img src="ceu.jpg" alt="ceu" style="width:100lvw; height:70lvh;">
+        <div id="nuvem1"></div>
+        <div id="nuvem2"></div>
+    
+    <img src="barco.png" id="barco" alt="barco navegando">
+</div>
+    
+    <div id="mar">
+    </div>
+    <div class="animado"></div>
+</body>
+</html>
