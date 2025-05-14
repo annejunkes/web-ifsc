@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
+<style>   
 body{
     font-family: "Courier Prime Serif", "Courier New", Courier, monospace;
     font-weight: bold;
@@ -14,6 +14,12 @@ p{
     margin:40px;
     font-weight:normal;
 }
+header {
+            
+            color: white;
+            
+        }
+
 h3{
     -webkit-text-fill-color:rgba(56, 102, 65);
 }
@@ -96,11 +102,52 @@ h3{
     height:50px;
     width:100%;
 }
+
+@media (max-width: 1000px) {
+
+  #barra{
+    height: fit-content;
+    display:grid;
+    grid-template-rows: repeat(12, 20px); ;
+    grid-template-columns: 80lvw;    
+}
+#superior{
+    grid-template-rows: 20% 80%;
+}
+.linha{
+    align-self:baseline;
+    height:1.5px;
+    width:100%;
+    background-color:rgba(56, 102, 65);
+}
+
+}
+
+@media (max-width: 500px) {
+    body{
+        font-size: 12px;
+    }
+    #barra{
+    grid-template-rows: repeat(2, 50px); 
+    grid-template-columns: 90px 5px 90px 5px 200px 5px;
+    justify-items: center;
+    }
+    .linha{
+    align-self:center;
+    height:60%;
+    width:1px;
+    background-color:rgba(56, 102, 65);
+    }
+    #superior{
+    grid-template-rows: 35% 65%;
+    }
+
+
+}
 </style>
 <body>
     
-    <div id="container">
-
+    <header>
         <div id="superior"> 
             
             <div id="faixa1">
@@ -122,11 +169,15 @@ h3{
                 <div class="linha"></div>
                 <div >Câmpus</div>
                 <div class="linha"></div>
-                <div>Áreas de conhecimento</div>
+                <div style="white-space: nowrap;"><span>Áreas de conhecimento</span></div>
             </div>
             
 
         </div>
+
+    </header>
+    <div id="container">
+
 
         <div id="inferior">
             <div id="titulo">
@@ -134,21 +185,21 @@ h3{
                 <h3>ARTIGOS</h3>
                 <div class="linhah"></div>
              </div>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO **********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO **********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO **********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO **********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-            <p>TÍTULO DO ARTIGO *******************************************
+            <p>TÍTULO DO ARTIGO ************************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO ***********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO ***********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
-             <p>TÍTULO DO ARTIGO *******************************************
+             <p>TÍTULO DO ARTIGO ***********************************
                 <br> Nome do autor principal - xx/xx/xxxx</p>
              </div>
         
