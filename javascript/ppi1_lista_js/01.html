@@ -7,28 +7,53 @@
 </head>
 <body>
 
-    <h1>O que é Javascript?</h1>
+    <h1 id = "titulo">O que é Javascript?</h1>
 
-    <p>1 - Qual foi a motivação para a criação do JavaScript?
+    <p id = "r1"><b>1 - Qual foi a motivação para a criação do JavaScript?</b>
     <br> R: A falta de iteratividade da web, já que ela era construída apenas com HTML e CSS. 
     Os usuários não podiam interagir com as páginas, tornando a experiência na web muito limitada.
     Com o objetivo de oferecer mais funcionalidade para as páginas surgiu o Javascript em 1995.
     </p>
 
-    <p>2 - Qual é a diferença entre execução no navegador e no servidor?
+    <p id = "r2"><b>2 - Qual é a diferença entre execução no navegador e no servidor?</b>
     <br> R: A execução no servidor necessita de um envio de requisição, para processar e recarregar 
     toda a página, ou encaminharo usuário a outra página, reexecutando dezenas de requisições para 
     download dos html, css, imagens.
-    <br>Coma execução no navegador, as aplicações rodam em parte no cliente, de forma que
+    <br>Com a execução no navegador, as aplicações rodam em parte no cliente, de forma que
     somente quando há necessidade de algum dado, é requisitado apenas uma pequena porção de dados ao servidor.
     As vantagens de execução no navegador é a rapidez e fluidez no carregamento das páginas.
     </p>
 
-    <p>3 - Qual é conceito de sandbox no navegador?
+    <p id = "r3"><b>3 - Qual é conceito de sandbox no navegador?</b>
     <br> R: sandbox é uma caixa dentro do navegador que roda código (encapsulada), envia requisições de 
     forma limitada para o servidor, acessa alguns eventos, interage com o html da página. O Javascript roda 
     dentro da sandbox Ele acessa dados em memória.
     </p>
+
+    <p id = "r4"><b>4 - O que são os objetos globais como document, console e alert?</b>
+    <br> R: Um objeto é uma ocorrência de um tipo personalizado para o programa ou contexto, é nada mais do 
+    que um conjunto de atributos aninhados a uma variável denomina-se um objeto.<br>
+    <br>---------document-----------------
+    <br>É um objeto que representa o DOM (Document Object Model) da página. O DOM é uma 
+    representação hierárquica em forma de árvore de um documento HTML ou XML, que permite que o código JavaScript 
+    interaja com os elementos da página, manipulando-os e alterando sua aparência e comportamento.<br>
+    <br>---------console-------------------
+    <br>É um objeto que representa o console JS, inclusive a sua sub função log() imprime no terminal e clear() imprime no terminal.<br>
+    <br>-----------alert----------------------
+    <br>A função window.alert() exibe uma caixa de diálogo com uma mensagem para o usuário.
+    </p>
+    
+    <p id = "r5"><b>5 - Exiba a hora atual:</b></p>
+    <p id="dataHora"></p>
+
+    <script>
+        console.log("esta é a primeira lista de exercícios javascript");
+        alert("Olá, você está acessando a página da primeira lista Javascript!");
+        
+        let dataAtual = new Date();
+        let data = dataAtual.toLocaleTimeString();
+        document.getElementById("dataHora").innerHTML = data;
+    </script>
 
     
 </body>
