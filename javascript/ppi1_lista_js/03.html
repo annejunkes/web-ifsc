@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA IMC</title>
+</head>
+<style>
+    fieldset{
+        background-color: rgb(230, 220, 171);
+    }
+</style>
+
+
+
+
+<body>
+    
+    <h1> Calculadora IMC</h1>
+    <fieldset> Nome <input id = "inome"> </fieldset>
+    <fieldset>Peso <input id = "ipeso"> </fieldset>
+    <fieldset>Altura <input id = "ialtura"> </fieldset>
+    <button id = "botao">Calcular</button>
+    <h3> Resultado </h3>
+    <img src="perfil.jpg" alt="">
+    <script>
+        let nome = nomeInput
+        let button = document.querySelector("botao")
+
+        if(localStorage.key("nome")){
+            inome.value=localeStorage.getItem()
+        }
+
+        button.addEventListener("click", ()=> {
+
+            peso=Number(ipeso.value)
+            altura=Number(ialtura.value)
+            localStorage.setItem("nome", inome.value)
+            localStorage.setItem("peso", peso)
+            localStorage.setItem("peso", altura)
+        })
+        console.log(nome)
+
+
+        function calcularIMC(peso, altura){
+            return peso/(altura*altura)
+        }
+    </script>
+</body>
+</html>

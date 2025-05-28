@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1> NUMERO RANDOM</H1>
+   
+    <button id="botao">Clique</button>
+
+    <p id="tipoString">esse texto sera substituido pelo tipoString inner HTML</p>
+    <p id="tipoNumero">esse texto sera substituido pelo tipoNumero inner HTML</p>
+    <p id="tipoBoolean">esse texto sera substituido pelo tipoBoolean inner HTML</p>
+    <p id="tipoIndefinido">esse texto sera substituido pelo tipoBoolean inner HTML</p>
+    <p id="tipoNulo">esse texto sera substituido pelo tipoBoolean inner HTML</p>
+    <p id="tipoArray">esse texto sera substituido pelo tipoBoolean inner HTML</p>
+    
+
+    <script> 
+
+    
+        
+        let texto = "amo"
+        let numero = Number(19)
+        let ehVerdade = true
+        let indefinido = undefined
+        let nada = null
+        let objeto = {}
+        let array = []
+
+
+        tipoString.innerHTML = typeof(texto)
+        tipoNumero.innerHTML = typeof(numero)
+        tipoBoolean.innerHTML = typeof(ehVerdade)
+        tipoIndefinido.innerHTML = typeof(indefinido)
+        tipoNulo.innerHTML = typeof(nada)
+        tipoArray.innerHTML = typeof(array)
+
+
+        if(Array.isArray(array)){
+            tipoArray.innerHTML = "okayy vc é array girl!!!"
+        }
+        
+        for(let i=0; i<10; i++){
+            array.push(Math.random()*100)
+        }
+        
+        array.forEach((item, indice)=>{
+            p = document.createElement("p")
+            p.innerHTML=`indice:${indice} valor:${item}`
+            document.body.appendChild(p)
+        })
+
+
+        
+    
+    </script>
+    
+</body>
+</html>
