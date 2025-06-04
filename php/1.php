@@ -10,6 +10,11 @@
     echo "Olá";
     $nome="Anne";
     echo $nome;
+
+    $curso= $_GET["nome"];
+    echo $curso;
+
+    var_dump($_SERVER);
     ?>
 </body>
 </html>
