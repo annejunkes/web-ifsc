@@ -9,7 +9,7 @@ class UsuarioDAO{
         $this->pdo = Conexao::getConexao();
     }
 
-    public function insere(Usuario $usuario){
+    public function inserir(Usuario $usuario){
         $sql = "INSERT INTO usuarios (nome, email, senha) VALUES(?, ?, ?)";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$usuario->nome, $usuario->email, $usuario->senha]);
