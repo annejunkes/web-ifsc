@@ -9,7 +9,7 @@
 
 <form action="2.php">
     <input type="number" name="A";>
-    <input type="number" name="A";>
+    <input type="number" name="B";>
     <input type="submit">
     <?php
 
