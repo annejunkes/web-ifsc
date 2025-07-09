@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Verificador de Palíndromo</h1>
+
+<input id="texto">
+<button onclick="verificar()">Verificar</button>
+<p id="resposta"></p>
+
+<script>
+    
+    
+    function verificar() {
+let palavra = document.getElementById("texto").value;
+      let palindromo = true;
+
+     for (let i = 0; i < palavra.length / 2; i++) {
+     let letra1 = palavra[i];
+     let letra2 = palavra[palavra.length - 1 - i];
+
+     if (letra1 != letra2) {
+     palindromo = false;
+     break;
+     }
+
+     }
+
+    if (palindromo) {
+        document.getElementById("resposta").innerText = "É palíndromo";
+} 
+else {
+    document.getElementById("resposta").innerText = "Não é palíndromo";
+      }
+    }
+</script>
+
+</body>
+</html>

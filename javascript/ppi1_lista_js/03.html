@@ -22,10 +22,16 @@
     <fieldset>Altura <input id = "ialtura"> </fieldset>
     <button id = "botao">Calcular</button>
     <h3> Resultado </h3>
-    <img src="perfil.jpg" alt="">
+    <img id="perfil" src="perfil.jpg" alt="">
+
     <script>
-        let nome = nomeInput
-        let button = document.querySelector("botao")
+        let nome = nomeInput = document.getElementById("inome");
+        let pesoInput = document.getElementById("ipeso");
+    let alturaInput = document.getElementById("ialtura");
+    let resultado = document.getElementById("resultado");
+
+        let button = document.getElementById("botao");
+
 
         if(localStorage.key("nome")){
             inome.value=localeStorage.getItem()
@@ -33,14 +39,39 @@
 
         button.addEventListener("click", ()=> {
 
-            peso=Number(ipeso.value)
-            altura=Number(ialtura.value)
-            localStorage.setItem("nome", inome.value)
-            localStorage.setItem("peso", peso)
-            localStorage.setItem("peso", altura)
-        })
-        console.log(nome)
+            peso=Number(ipeso.value);
+            altura=Number(ialtura.value);
+            let imc = calcularIMC(peso, altura);
 
+            localStorage.setItem("nome", inome.value);
+            localStorage.setItem("peso", peso);
+            localStorage.setItem("altura", altura);
+
+            atualizarImagemPerfil(imc);
+
+        })
+
+
+function atualizarImagemPerfil(imc) {
+  let imagem = "";
+
+  if (imc < 18.5) {
+    imagem = "abaixopeso.png";
+  } else if (imc < 25) {
+    imagem = "normal.jpg";
+  } else if (imc < 30) {
+    imagem = "obesidade1.jpg";
+  } else if (imc < 35) {
+    imagem = "obesidade2.jpg";
+  } else {
+    imagem = "obesidade3.jpg";
+  }
+
+  document.getElementById("perfil").src = imagem;
+}
+
+
+atualizarImagemPerfil(imc);
 
         function calcularIMC(peso, altura){
             return peso/(altura*altura)

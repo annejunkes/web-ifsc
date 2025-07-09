@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<p>Inicio: <input type="number" id="inicio"></p>
+<p>Fim: <input type="number" id="fim"></p>
+
+<button onclick="verificarPrimos()">Verificar</button>
+
+<div id="resultadoPrimos"></div>
+
+<script>
+function verificarPrimos() {
+    let inicio = Number(document.getElementById("inicio").value);
+    let fim = Number(document.getElementById("fim").value);
+      let resultado = document.getElementById("resultadoPrimos");
+
+    let primos = "";
+
+for (let i = inicio; i <= fim; i++) {
+if (ehPrimo(i)) {
+    primos += i + " ";
+}
+}
+
+resultado.textContent =   primos;
+    }
+
+    function ehPrimo(numero) {
+if (numero < 2) return false;
+    for (let i = 2; i < numero; i++) {
+        if (numero % i === 0) {
+          return false;
+    }}
+    return true;
+}
+</script>
+</body>
+</html>

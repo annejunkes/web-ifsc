@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Calculadora</h1>
+
+<input id="valor1">
+<input id="valor2">
+
+<br>
+<br>
+
+<button onclick="somar()">+</button>
+<button onclick="subtrair()">-</button>
+<button onclick="multiplicar()">*</button>
+<button onclick="dividir()">/</button>
+
+  <p id="resultado"></p>
+
+<script>
+
+
+function somar() {
+    let v1 = Number(document.getElementById("valor1").value);
+    let v2 = Number(document.getElementById("valor2").value);
+
+    document.getElementById("resultado").innerText = v1 + v2;
+}
+
+function subtrair() {
+    let v1 = Number(document.getElementById("valor1").value);
+    let v2 = Number(document.getElementById("valor2").value);
+
+    document.getElementById("resultado").innerText = v1 - v2;
+}
+
+function multiplicar() {
+   let v1 = Number(document.getElementById("valor1").value);
+   let v2 = Number(document.getElementById("valor2").value);
+
+document.getElementById("resultado").innerText = v1 * v2;
+}
+
+
+function dividir() {
+      let v1 = Number(document.getElementById("valor1").value);
+      let v2 = Number(document.getElementById("valor2").value);
+      
+      document.getElementById("resultado").innerText = v1 / v2;
+    }
+
+
+
+</script>
+
+</body>
+</html>
