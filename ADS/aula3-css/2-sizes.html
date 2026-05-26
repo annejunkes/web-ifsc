@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> CSS </title>
+        <link rel="stylesheet" href="2-style.css">
+    </head>
+    <body>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            dd {
+                color: purple;
+            }
+            body {
+                background-color: rgb(154, 222, 249);
+                background-image: url('horse.png');
+                background-size: contain;
+            }
+        </style>
+        <h2>CSS (Cascading Style Sheet)</h2>
+        <h3>Linguagem de estilização</h3>
+        <dl>
+            <dt>CSS Externo (definido no head)</dt>
+                <dd>
+                <code>
+                    &ltlink rel="stylesheet" href="style.css"&gt
+                </code>
+                </dd>
+            <dt>CSS Inline (incorporado no elemento "style")</dt>
+                <dd>
+                <code>
+                    &ltelemento style="chave:valor;"&gt
+                </code>
+                </dd>  
+        </dl>
+        <h3>Model box</h3>
+        <img src="model_box.png">
+        <h3 style="
+        border: 1px solid black;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        ">Padding - espaçamento entre o elemento e o html</h3>
+
+        <span style="
+        display: block;
+        width:200px;
+        height: 100px;
+        background-color: gold;
+        border: 10px solid green;
+        background-image: url('horse.png');
+        background-position: center;
+        background-size: 150px 100px
+        ">Texto exemplo de camadas => color => img => text</span>
+        <span>(the horse is behind the text, trapped in a small place)</span>
+        <p>But now, he is free</p>
+        <img style="width:300px;"src="horse.png">
+
+
+    </body>
+</html>

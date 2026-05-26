@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1 - CSS (Canvas)</title>
+    </head>
+    <body>
+        <h1>CANVAS</h1>
+        <canvas id="canvas" width="1920px" height="1080px"></canvas>
+
+        <script>
+            let borda = canvas.getContext("2d")
+            var mouseEvent;
+            desenhando = false;
+
+            borda.moveTo(0, 0)
+            borda.lineTo(100, 100)
+            borda.stroke();
+
+            canvas.addEventListener("mousedown", (evento
+            )=>{
+                desenhando = true;
+                borda.moveTo(evento.offsetX, evento.offsetY)
+            })
+
+            canvas.addEventListener("mouseup", (
+            )=>{
+                desenhando = false;  
+            })
+
+
+            canvas.addEventListener("mousemove", (evento
+            )=>{
+                mouseEvent=evento
+                console.log(evento.offsetX + ":" + evento.offsetY) 
+                if(desenhando){
+                borda.lineTo(evento.offsetX, evento.offsetY)
+                borda.stroke();
+                }
+            })
+
+        </script>
+    </body>
+</html>
