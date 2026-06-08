@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body > div{
+            border: 2px solid black;
+            width: 70lvw;
+            padding: 30px;
+            margin: 10px;
+        }
+        #yellow_div{
+            background-color: rgb(237, 236, 149)
+        }
+        
+        th, td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .circulo{
+            background-color:rgb(135, 255, 149);
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Formas de aplicar CSS</h2>
+        <p>Existem 3 formas de aplicar estilo a página:</p>
+        <div style="background-color: rgb(196, 167, 255)">
+            <p>1. Inline: dentro da própria tag do elemento <br>Ex: &lt;div style="background-color: purple"&gt;</p>
+        </div>
+
+        <div id="yellow_div">
+            <p>2. Interno: dentro da head em tag style do html 
+                <br>Ex: 
+                <br>&lt;head&gt;
+                <br>____&lt;style&gt;
+                <br>____div{
+                    background-color: yellow;
+                }
+                <br>____/&lt;style&gt;
+                <br>&lt;/head&gt;
+            </p>
+        </div>
+
+        <div id="pink_div">
+            <p>3. Arquivo css: tag de link no head
+                <br>Ex: 
+                <br>&lt;head&gt;
+                <br>____&lt;link rel="stylesheet" href="./css/style.css"&gt;
+                <br>&lt;/head&gt;
+            </p>
+        </div>
+    </div>
+
+
+    <div>
+        <h2>Seletores</h2>
+        <h3>Básicos</h3>
+        <p>*{}  /* universal */
+        <br>elemento{} 
+        <br>.classe{} 
+        <br>#id{}
+        <br>seletor1, seletor2 {} /* agrupa */</p>
+
+        <h3>Combinadores</h3>
+        <p>div p     {} /* descendente (qualquer nível) */
+        <br>div > p   {} /* filho direto */
+        <br>h1 + p    {} /* irmão adjacente (imediatamente após) */
+        <br>h1 ~ p    {} /* irmão geral (depois, mesmo nível) */
+        </p>
+    </div>
+
+
+    <div>
+        <h2>Box Model</h3>
+        <p>*cada elemento é uma caixa
+        <br>*margin (externo)
+        <br>*padding (interno)
+        <br>*border (necessário especificar tipo (solid, dotted, ..))
+        <br>*width e height afetam apenas content por padrão
+        </p>
+    </div>
+
+    <div>
+        <h2>Positions</h3>
+        <table>
+            <tr>
+                <th>valor</th>
+                <th>comportamento</th>
+            </tr>
+            <tr>
+                <td>static</th>
+                <td>padrão - segue fluxo normal</td>
+            </tr>
+            <tr>
+                <td>relative</th>
+                <td>desloca a partir de sua posição original (espaço original reservado)</td>
+            </tr>
+            <tr>
+                <td>absolute</th>
+                <td>posiciona em relação ao ancestral posicionado mais próximo (pai com relative/absolute/fixed). Sai do fluxo.</td>
+            </tr>
+            <tr>
+                <td>fixed</th>
+                <td>posiciona em relação à janela (viewport). Não rola.</td>
+            </tr>
+        </table>
+        <h3>Propriedades de deslocamento</h3>
+        <p>top, right, bottom, left 
+        (funcionam apenas com position diferente de static)</p>
+    </div>
+
+    <div style="position: relative;
+            height: 200px;">
+        <div class="circulo" 
+            style="position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+        "></div>
+        <div class="circulo" 
+            style="position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgb(255, 251, 0);
+        "></div>
+        <div class="circulo" 
+            style="position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background-color: rgb(0, 255, 76);
+        "></div>
+        <div class="circulo" 
+            style="position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: rgb(0, 89, 255);
+        "></div>
+        <div class="circulo" 
+            style="position: absolute;
+            right: 50%;
+            top: 50%;
+            background-color: rgb(207, 107, 169);
+        "></div>
+    </div>
+
+
+</body>
+</html>
