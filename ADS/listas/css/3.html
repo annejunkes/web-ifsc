@@ -1,0 +1,54 @@
+<!-- Atividade 3 – Como podemos incluir CSS em documentos HTML?-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body > div{
+            border: 2px solid black;
+            width: 70lvw;
+            padding: 30px;
+            margin: 10px;
+        }
+        #yellow_div{
+            background-color: rgb(237, 236, 149)
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Formas de aplicar CSS</h2>
+        <p>Existem 3 formas de aplicar estilo a página:</p>
+        <div style="background-color: rgb(196, 167, 255)">
+            <p>1. Inline: dentro da própria tag do elemento <br>Ex: &lt;div style="background-color: purple"&gt;</p>
+        </div>
+
+        <div id="yellow_div">
+            <p>2. Interno: dentro da head em tag style do html 
+                <br>Ex: 
+                <br>&lt;head&gt;
+                <br>____&lt;style&gt;
+                <br>____div{
+                    background-color: yellow;
+                }
+                <br>____/&lt;style&gt;
+                <br>&lt;/head&gt;
+            </p>
+        </div>
+
+        <div id="pink_div">
+            <p>3. Arquivo css: tag de link no head
+                <br>Ex: 
+                <br>&lt;head&gt;
+                <br>____&lt;link rel="stylesheet" href="./css/style.css"&gt;
+                <br>&lt;/head&gt;
+            </p>
+        </div>
+    </div>
+</body>
+</html>
