@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-template-areas:
+        "header header header "
+        "main   .    sidebar "
+        "footer footer footer ";
+        grid-template-rows:  15lvh 70lvh 15lvh;
+        grid-template-columns: 60lvw 25lvw 15lvw;
+    }
+    .box{
+        text-align: center;
+        align-content: center;
+    }
+
+    #box1{
+        background-color: rgb(202, 130, 21);
+        grid-area: header;
+    }
+    #box2{
+        background-color: rgb(88, 202, 236);
+        grid-area: main;
+    }
+    #box3{
+        background-color: rgb(209, 68, 43);
+        grid-area: sidebar;
+    }
+    #box4{
+        background-color: rgb(139, 141, 44);
+        grid-area: footer;
+
+    }
+    #box5{
+        background-color: rgb(228, 122, 122);
+        grid-area: footer;
+    }
+    #box6{
+        background-color: rgb(202, 21, 21);
+        grid-area: footer;
+    }
+    #box7{
+        background-color: rgb(74, 180, 175);
+        grid-area: footer;
+    }
+    #box8{
+        background-color: rgb(117, 107, 19);
+        grid-area: footer;
+    }
+    #box9{
+        background-color: rgb(56, 136, 36);
+        grid-area: footer;
+    }
+
+</style>
+<body>
+    <div class="container">
+    <div class="box" id="box1">header</div>
+    <div class="box" id="box2">main</div>
+    <div class="box" id="box3">sidebar</div>
+    <div class="box" id="box4">box4</div>
+    <div class="box" id="box5">box5</div>
+    <div class="box" id="box6">box6</div>
+    <div class="box" id="box7">box7</div>
+    <div class="box" id="box8">box8</div>
+    <div class="box" id="box9">footer</div>
+    </div>
+</body>
+</html>
