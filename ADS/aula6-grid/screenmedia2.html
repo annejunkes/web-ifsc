@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @media screen and (max-width: 500px){
+        .container{
+            display: grid;
+            grid-template-areas:
+            "header header header "
+            "main main sidebar "
+            "footer footer footer ";
+            grid-template-rows:  10lvh 50lvh 40lvh;
+            grid-template-columns: 60lvw 25lvw 15lvw;
+        }
+    }
+
+    @media screen and (min-width: 900px){
+        .container{
+            display: grid;
+            grid-template-areas:
+            "header header header "
+            "main   .    sidebar "
+            "footer footer footer ";
+            grid-template-rows:  10lvh 50lvh 40lvh;
+            grid-template-columns: 60lvw 25lvw 15lvw;
+        }
+    }
+
+    
+    .box{
+        text-align: center;
+        align-content: center;
+    }
+
+    #box1{
+        background-color: rgb(202, 130, 21);
+        grid-area: header;
+    }
+    #box2{
+        background-color: rgb(88, 202, 236);
+        grid-area: main;
+    }
+    #box3{
+        background-color: rgb(209, 68, 43);
+        grid-area: sidebar;
+    }
+    #box9{
+        background-color: rgb(56, 136, 36);
+        grid-area: footer;
+    }
+
+</style>
+<body>
+    <div class="container">
+    <div class="box" id="box1">header</div>
+    <div class="box" id="box2">main</div>
+    <div class="box" id="box3">sidebar</div>
+    <div class="box" id="box9">footer</div>
+    </div>
+</body>
+</html>

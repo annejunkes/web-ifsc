@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @media screen and (min-width: 900px){
+        .container{
+            display: grid;
+            grid-template-areas:
+            "header header header "
+            "left_aside banner right_aside "
+            "left_aside main right_aside "
+            "left_aside low_content right_aside "
+            "footer footer footer";
+            grid-template-rows:  10lvh 10lvh 50lvh 10lvh 20lvh;
+            grid-template-columns: 10lvw 80lvw 10lvw;
+        }
+    }
+
+    @media screen and (max-width: 900px){
+        .container{
+            display: grid;
+            grid-template-areas:
+            "header "
+            "banner "
+            "left_aside "
+            "main "
+            "right_aside "
+            "low_content "
+            "footer";
+            grid-template-rows:  10lvh 10lvh 10lvh 40lvh 10lvh 10lvh 10lvh;
+            grid-template-columns: 100lvw;
+        }
+    }
+
+    
+    .box{
+        text-align: center;
+        align-content: center;
+        margin: 5px;
+    }
+
+    #box1{
+        background-color: rgb(202, 130, 21);
+        grid-area: header;
+    }
+    #box2{
+        background-color: rgb(49, 129, 25);
+        grid-area: banner;
+    }
+    #box3{
+        background-color: rgb(209, 68, 43);
+        grid-area: left_aside;
+    }
+    #box4{
+        background-color: rgb(19, 92, 187);
+        grid-area: main;
+    }
+
+    #box5{
+        background-color: rgb(202, 130, 21);
+        grid-area: right_aside;
+    }
+    #box6{
+        background-color: rgb(32, 122, 24);
+        grid-area: low_content;
+    }
+    #box7{
+        background-color: rgb(43, 109, 209);
+        grid-area: footer;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+    <div class="box" id="box1">header</div>
+    <div class="box" id="box2">banner</div>
+    <div class="box" id="box3">left aside</div>
+    <div class="box" id="box4">main</div>
+    <div class="box" id="box5">right aside</div>
+    <div class="box" id="box6">low content</div>
+    <div class="box" id="box7">footer</div>
+    </div>
+</body>
+</html>
