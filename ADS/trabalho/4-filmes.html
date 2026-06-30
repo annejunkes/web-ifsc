@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de Filmes</title>
+</head>
+<style>
+    li{
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1>Buscar Filmes</h1>
+    <input type="text" id="titulo" placeholder="Digite o título do filme">
+    <button onclick="buscarFilmes()">Buscar</button>
+    <hr>
+    <div id="conteudo"></div>
+
+    <script>
+        const API_KEY = '4a3b711b';
+
+        async function buscarFilmes() {
+            const titulo = document.querySelector('#titulo').value;
+            const conteudo = document.querySelector('#conteudo');
+
+            if (!titulo.trim()) {
+                conteudo.textContent = 'Digite um título válido.';
+                return;
+            }
+
+            const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(titulo)}`;
+
+            
+                const response = await fetch(url);
+                const dados = await response.json();
+
+                if (dados.Response === 'False') {
+                    conteudo.textContent = dados.Error;
+                    return;
+                }
+
+                if (!dados.Search || dados.Search.length === 0) {
+                    conteudo.textContent = 'Nenhum filme encontrado.';
+                    return;
+                }
+
+                let html = `<h3>Resultados encontrados: ${dados.totalResults}</h3>`;
+                html += '<ul>';
+
+                for (const filme of dados.Search) {
+                    html += `<li>`;
+                    html += `<strong>${filme.Title}</strong> (${filme.Year})`;
+                    
+                    if (filme.Poster && filme.Poster !== 'N/A') {
+                        html += `<br><img src="${filme.Poster}" alt="Pôster" style="max-width:100px;">`;
+                    } else {
+                        html += `<br>Pôster não disponível`;
+                    }
+                    
+                    html += `</li>`;
+                }
+
+                html += '</ul>';
+                conteudo.innerHTML = html;
+
+        }
+
+    </script>
+</body>
+</html>

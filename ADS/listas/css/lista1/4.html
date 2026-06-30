@@ -1,4 +1,3 @@
-<!--✅ Atividade 4 – Seja o trecho de código HTML e CSS da figura a seguir e explique porque cada regra foi aplicada em cada item.
 <!DOCTYPE html>
 <head>   
    <title>Exemplo especificidade de seletores</title>
@@ -24,5 +23,14 @@
    <!--item 7--> <li           class="churras">Linguiça</li>
    <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho</li>
    </ol>   
+
+   <p> O primeiro item(abacaxi) é da cor vermelha porque seu único seletor identificado é o tipo de tag (li) </p>
+   <p> O segundo item melão tem cor cinza porque sua única especificação é sua classe</p>
+   <p> O terceiro item é identificado por seu id que é a identificação mais específica, cor: azul</p>
+   <p> O quarto item (uva) é laranja por especificar sua classe além do seu id</p>
+   <p> O 5º item é cinza porque sua única especificação é sua classe</p>
+   <p> O 6º item é preto por sua identificação é sua classe e tag irmã</p>
+   <p> O 7º item é preto por sua identificação é sua classe e tag irmã (.churras)</p>
+   <p> O 8º item é magenta porque além da especifidade do id, é especificado que é draggable</p>
 </body>
-</html>-->
+</html>

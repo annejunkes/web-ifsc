@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA IMC</title>
+</head>
+<style>
+    fieldset{
+        background-color: rgb(230, 220, 171);
+    }
+</style>
+
+
+
+
+<body>
+    
+    <h1> Calculadora IMC</h1>
+    <fieldset> Nome <input id = "inome"> </fieldset>
+    <fieldset>Peso <input id = "ipeso"> </fieldset>
+    <fieldset>Altura <input id = "ialtura"> </fieldset>
+    <button id = "botao">Calcular</button>
+    <h3> Resultado </h3>
+    <img id="perfil" src="perfil.jpg" alt="">
+
+    <script>
+        let nome = nomeInput = document.getElementById("inome");
+        let pesoInput = document.getElementById("ipeso");
+    let alturaInput = document.getElementById("ialtura");
+    let resultado = document.getElementById("resultado");
+
+        let button = document.getElementById("botao");
+
+
+        if(localStorage.key("nome")){
+            inome.value=localeStorage.getItem()
+        }
+
+        button.addEventListener("click", ()=> {
+
+            peso=Number(ipeso.value);
+            altura=Number(ialtura.value);
+            let imc = calcularIMC(peso, altura);
+
+            localStorage.setItem("nome", inome.value);
+            localStorage.setItem("peso", peso);
+            localStorage.setItem("altura", altura);
+
+            atualizarImagemPerfil(imc);
+
+        })
+
+
+function atualizarImagemPerfil(imc) {
+  let imagem = "";
+
+  if (imc < 18.5) {
+    imagem = "abaixopeso.png";
+  } else if (imc < 25) {
+    imagem = "normal.jpg";
+  } else if (imc < 30) {
+    imagem = "obesidade1.jpg";
+  } else if (imc < 35) {
+    imagem = "obesidade2.jpg";
+  } else {
+    imagem = "obesidade3.jpg";
+  }
+
+  document.getElementById("perfil").src = imagem;
+}
+
+
+atualizarImagemPerfil(imc);
+
+        function calcularIMC(peso, altura){
+            return peso/(altura*altura)
+        }
+    </script>
+</body>
+</html>

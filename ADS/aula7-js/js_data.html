@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IMC</h1>
+    <p>CalculoIMC</p>
+    <span>peso</span><input type="number" id="peso">
+    <span>altura</span>
+    <input type="number" id="altura">
+
+    <script>
+        let pdata = document.createElement("p");
+        pdata.id = "pdata";
+        document.body.appendChild(pdata);
+        let intervalo;
+
+        let buttonCalc = document.createElement("button");
+        buttonCalc.innerHTML="Calcular";
+        document.body.appendChild(buttonCalc);
+
+        function atualizar(){
+            let peso = document.getElementById("peso");
+            let altura = document.getElementById("altura");
+            let imc = (altura*altura)/peso;
+            pdata.innerHTML = `IMC =  ${imc}`;
+            
+        }
+
+
+        buttonCalc.addEventListener("click", ()=>{
+            intervalo = setInterval(atualizar, 1000);
+        });
+        button2.addEventListener("click", ()=>{
+            clearInterval(intervalo);
+        });
+
+
+    </script>
+</body>
+</html>
