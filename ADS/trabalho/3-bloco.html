@@ -53,11 +53,8 @@
         function carregarNotas(){
             const dados = localStorage.getItem(STORAGE_KEY);
             if(dados){
-                try {
-                    return JSON.parse(dados);
-                } catch (e){
-                    return [];
-                }
+                return JSON.parse(dados);
+                
             }
             return [];
         }
@@ -112,15 +109,14 @@
                 btnEditar.style.marginRight = '6px';
                 
                 btnEditar.onclick = function(e){
-                    e.stopPropagation();
-                    carregarNotaParaEdicao(nota.id);
+                    
+                    carregarEdicao(nota.id);
                 };
 
                 const btnExcluir = document.createElement('button');
                 btnExcluir.textContent = 'Excluir';
                 
-                btnExcluir.onclick = function(e){
-                    e.stopPropagation();
+                btnExcluir.onclick = function(e){          
                     excluirNota(nota.id);
 
                 };
@@ -231,7 +227,7 @@
 
 
 
-        function carregarNotaParaEdicao(id){
+        function carregarEdicao(id){
             const notas = carregarNotas();
 
             let nota = null;
