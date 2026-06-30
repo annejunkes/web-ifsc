@@ -76,7 +76,7 @@
         function listarNotas(){
             const notas = carregarNotas();
             const listaUl = document.getElementById('listaNotas');
-            listaUl.innerHTML = ''; // limpa
+            listaUl.innerHTML = '';
 
             if(notas.length === 0){
                 listaUl.innerHTML = '<li>Nenhuma nota cadastrada.</li>';
@@ -93,13 +93,13 @@
                 li.style.display = 'flex';
      
 
-                // Parte esquerda: título (clique abre a nota)
+                
                 const tituloSpan = document.createElement('span');
                 tituloSpan.textContent = nota.titulo
                 tituloSpan.style.fontWeight = 'bold';
                 tituloSpan.style.flex = '1';
                 tituloSpan.style.marginRight = '10px';
-                // Ao clicar no título, visualiza a nota
+                
                 tituloSpan.onclick = function(){                    
                     visualizarNota(nota.id);
                 };
