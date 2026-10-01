@@ -1,0 +1,10 @@
+fetch() : frontend
+json_encode() : backend
+HTTP status 404  : protocolo
+$_GET['q'] : backend
+document.createElement() : frontend
+JSON : formato
+Content-Type: application/json : formato
+PDO : backend
+await resposta.json() : frontend
+SQL com prepared statement : backend

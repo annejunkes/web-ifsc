@@ -1,0 +1,34 @@
+<!-- Atividade 3: implemente
+Crie uma página com:
+
+um campo de busca de alunos;
+um botão “buscar”;
+uma lista de resultados;
+um endpoint PHP buscar-alunos.php que retorne JSON;
+tratamento para nenhum resultado encontrado;
+tratamento para erro de servidor.
+Desafio adicional:
+
+usar debounce;
+mostrar “carregando…”;
+usar PDO com prepared statement. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Busca</title>
+</head>
+<body>
+
+  
+    <h1>Alunos</h1>
+
+  <button id="btnCarregar">Buscar</button>
+  <p id="status"></p>
+  <ul id="listaAlunos"></ul>
+
+  <script src="scripts.js"></script>
+    
+</body>
+</html>

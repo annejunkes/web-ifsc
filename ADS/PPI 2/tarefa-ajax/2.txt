@@ -1,0 +1,19 @@
+<?php
+
+async function salvar() {
+  const resposta = await fetch("api/salvar.php", {
+    method: "POST",
+    body: { nome: "Ana" }
+  });
+
+  const dados = await resposta.json();
+  console.log(dados);
+}
+
+Perguntas:
+
+O corpo da requisição está correto? Não, precisa ser transformado em string com JSON.tringfy() 
+Falta algum header? Sim, falta o content-type
+Como o PHP deveria ler essa entrada? através de uma função que recebe o valor contido no elemento de entrada da view
+Como tratar erro HTTP? registrar erro em log  nao exibir detalhe em produção, retornar JSON padronizado
+ 

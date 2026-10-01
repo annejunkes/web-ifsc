@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="controller.php" method="post">
+        <input type="number" id="x">
+        <input type="number" id="y">
+        <button id="somar">Somar</button>
+
+        <p id="adicao"></p>
+    </form>
+    
+    <script>
+        const botaoSomar = document.getElmentById("somar");
+        const num1 = document.getElementById("x").value;
+        const num2 = document.getElementById("y").value;
+        botaoSomar.addEventListener("click", buscarSoma(num1, num2))
+
+        function buscarSoma(a, b){
+            const resposta = fetch("controller.php");
+            const resultado = resposta.json();
+            resultado.innerHTML = resultado;
+
+        }
+    </script>
+</body>
+</html>
