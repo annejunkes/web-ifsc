@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS catalogo CHARACTER SET utf8mb4;
+USE catalogo;
+
+CREATE TABLE produto (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(100) NOT NULL,
+preco DECIMAL(10,2) NOT NULL,
+estoque INT DEFAULT 0
+);
+
+CREATE TABLE usuario (
+id INT PRIMARY KEY AUTO_INCREMENT,
+login VARCHAR(50) NOT NULL UNIQUE,
+senha VARCHAR(255) NOT NULL
+);
+
+INSERT INTO produto (nome, preco, estoque) VALUES
+('Teclado', 120.50, 10),
+('Mouse', 65.00, 25),
+('Monitor 24', 899.90, 4);

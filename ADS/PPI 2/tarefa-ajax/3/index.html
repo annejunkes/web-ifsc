@@ -12,6 +12,7 @@ Desafio adicional:
 usar debounce;
 mostrar “carregando…”;
 usar PDO com prepared statement. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +24,15 @@ usar PDO com prepared statement. -->
 
   
     <h1>Alunos</h1>
+    <label for="busca">Nome do aluno:</label>
+    <input id="busca">
+    <button id="btnBuscar">Buscar</button>
 
-  <button id="btnCarregar">Buscar</button>
-  <p id="status"></p>
-  <ul id="listaAlunos"></ul>
+    <p id="status"></p>
+    <ul id="resultado"></ul>
 
-  <script src="scripts.js"></script>
+
+  <script src="app.js"></script>
     
 </body>
 </html>

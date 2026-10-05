@@ -1,0 +1,42 @@
+<!-- Atividade 4: transformar página tradicional em Ajax
+Dado um formulário PHP tradicional:
+
+<form action="salvar.php" method="post">
+  <input name="titulo">
+  <textarea name="descricao"></textarea>
+  <button>Salvar</button>
+</form> 
+
+Transforme em:
+formulário interceptado por JavaScript;
+envio com fetch();
+PHP retornando JSON;
+atualização da mensagem na tela sem reload.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formTitulo">
+    <label>
+      Título:
+      <input name="titulo" required>
+    </label>
+
+    <label>
+      Descrição:
+      <textarea name="descricao" required></textarea>
+    </label>
+
+    <button type="submit">Salvar</button>
+  </form>
+
+  <p id="mensagem"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
